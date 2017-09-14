@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .box {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .title{
+    text-align: center;
+  }
+  .inp {
+    width: 500px;
+
+    margin: 0 auto;
+  }
+  #val{
+    height: 100px;
+
+  }
+  #val h1{
+    font-size: 30px;
+    text-align: center;
+  }
+    #inp{
+      width: 100px;height: 100px;
+      font-size: 20px;
+      color:red;
+      text-align: center;
+    }
+    #btn{
+      margin-left: 220px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="title">
+      <h1>报菜名</h1>
+    </div>
+    <div class="inp">
+      <div id="val">
+        <img src="" alt="" id='img'>
+      </div>
+       <br />
+      <input type="button" value="开始" id='btn'>
+    </div>
+  </div>
+  <script type="text/javascript">
+    Inp = document.getElementById('inp');
+    val = document.getElementById('val');
+    Img = document.getElementById('img')
+    h = val.getElementsByTagName('h1');
+    console.log(h)
+    Btn = document.getElementById('btn')
+    Btn.onclick=function(){
+      food = ['蒸羊羔','蒸熊掌','蒸鹿尾儿','烧花鸭','烧雏鸡儿','烧子鹅 ','卤煮咸鸭','酱鸡','腊肉','松花','小肚儿','晾肉','香肠','什锦苏盘','熏鸡','白肚儿','罐儿野鸡','罐儿鹌鹑']
+      arr = Math.random();
+      fLength = food.length;
+
+      eat = Math.floor(arr*fLength);
+      h.innerHTML=food[eat]
+      H1 = '<h1>'+ h.innerHTML +'</h1>'
+      val.innerHTML=H1
+    }
+  </script>
+</body>
+</html>
